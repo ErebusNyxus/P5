@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Index</title>
+        <style>
+        body {
+            background-color: rgb(42, 42, 42);
+            display: grid;
+            scroll-behavior: smooth; 
+            background-image: url(Background.jpg);
+        }
+
+        @media only screen and (max-width: 767px) {
+            body {
+                max-width: 393px;
+                margin: 0 auto;
+            }
+        }
+
+        @media only screen and (max-width: 2000px) {
+            body {
+                max-width: 393px;
+                margin: 0 auto;
+            }
+        }
+
+        
+        #notif-salin {
+        color: gold; 
+        }
+        
+        @keyframes fadeIn {
+        from { opacity: 0;}
+        to { opacity: 100%;}
+        }
+
+        /* Kiri */
+        @keyframes slideIn {    
+        from {transform: translate(-100%);}
+        to {transform: translate(0%);}
+        }
+
+        /* Kanan */
+        @keyframes slideOut  {
+        from {transform: translate(100%);}
+        to {transform: translate(0%);}
+        }
+
+        /* Halaman Cover */
+        .judul {
+            padding: 10px;
+            margin-top: 20px;
+            border: 3px solid gold;
+            text-align: center;
+            border-top-left-radius: 40px; 
+            border-top-right-radius: 40px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            color: gold;
+            background-color: black;
+            font-style: italic;
+            display: grid;
+            font-size: 20px;
+        }
+
+        .ucapan, .tujuan {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            font-style: italic;
+        }
+
+        .tombol {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .btn-inv {
+            padding: 10px;
+            border: 1px solid gold;
+            background-color: black;
+            color: gold;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .btn-inv:hover {
+            background-color: rgb(102, 102, 102);
+            color: goldenrod;
+        }
+
+        .Ayat {
+            text-align: center;
+            display: none; 
+            margin-top: 70px;
+            animation: fadeIn 3s ease-in;
+        }
+
+        .Ayat, hr {
+            margin-top: 60px;
+        }
+
+        .title {
+            font-size: 25px;
+            font-style: italic;
+            color: gold;
+            animation: slideOut 2s ease-in;
+        }
+
+        .surah, .isi {
+            font-style: italic;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        .surah {
+            color: goldenrod;
+            animation: slideIn 2s ease-in;
+        }
+
+        .isi {
+            color: white;
+            animation: slideIn 2s ease-in;
+        }
+        .kata-kata {
+            text-align: center;
+            display: none; 
+            animation: fadeIn 3s ease-in;
+        }
+
+        .title2 {
+            font-size: 25px;
+            font-style: italic;
+            color: gold;
+            animation: slideOut 2s ease-in;
+        }
+
+        .isi2 {
+         font-style: italic;
+         margin-top: 30px;
+         font-size: 20px;
+         color: white;
+         animation: slideIn 2s ease-in;
+        }   
+
+    /* Halaman Mempelai */
+    .Mempelailk {
+     margin-top: 70px;
+    text-align: center;
+    display: none;
+    }
+
+    .lk{
+    border-top-left-radius: 30px ;
+    border-top-right-radius: 30px ;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: 2px solid gold;
+    }
+
+    .groom {
+    font-size: 20px;
+    color: gold;
+    }
+
+    .groom-name , .groom-deets {
+    color: white;
+    }
+
+    .pr {
+    border-top-left-radius: 30px ;
+    border-top-right-radius: 30px ;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: 2px solid gold;
+    margin-top: 20px;
+    }
+    
+    .Mempelaipr {
+    text-align: center;
+    display: none;
+    }
+
+    .bride {
+    font-size: 20px;
+    color: gold;
+    }
+
+    .bride-name , .bride-deets {
+    color: white;    
+}
+
+    .male-social{
+        justify-content: center; 
+        display: none;
+        margin: 50px;
+    }
+
+    .female-social {
+        justify-content: center; 
+        display: none;
+        margin: 50px;
+    }
+
+    .garis {
+        display: none;
+    }
+
+    /* Halaman Event */
+    .title-event {
+    color: gold;
+    text-align: center;
+    font-style: italic;
+    display: none;
+    }
+
+    .Akad {
+    margin-top: 20px;
+    border: 1px solid gold;
+    border-radius: 15px;
+    text-align: center;
+    display: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    }
+
+    .akad-title {
+    color: gold;
+    }
+
+    .date, .time{
+    color: white;
+    }
+
+    .place {
+    color: white;
+    }
+
+    .Map-Akad {
+    width: 200px;
+    height: 160px;
+    margin-top: 30px;
+    border-radius: 8px;
+    }
+
+    .akad-loc {
+        margin-bottom: 20px;
+        padding: 8px;
+        border-radius: 8px;
+        background-color: black;
+        color: gold;
+        border: 1px solid gold;
+    }
+
+    .akad-loc:hover {
+        padding: 9px;
+        background-color: grey;
+        color: gold;
+    }
+
+    .Resepsi {
+    border: 1px solid gold;
+    margin-top: 20px;
+    border-radius: 15px;
+    text-align: center;
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+
+    .resepsi-title {
+    color: gold;
+    }
+
+    .resepsi-date ,.resepsi-time ,.resepsi-location {
+    color: white;
+    }
+
+    .Map-resepsi {
+    width: 200px;
+    height: 160px;
+    margin-top: 30px;
+    border-radius: 8px;
+    }
+
+    .resepsi-loc {
+        margin-bottom: 20px;
+        padding: 8px;
+        border-radius: 8px;
+        background-color: black;
+        color: gold;
+        border: 1px solid gold;
+    }
+
+    .resepsi-loc:hover {
+        padding: 9px;
+        background-color: grey;
+        color: gold;
+    }
+
+    .garis2 {
+        display: none;
+        margin: 20px;
+    }
+
+    /* Halaman Gallery */
+
+    .Gallery {
+        text-align: center;
+        margin: 0 auto;
+        display: none;
+        font-style: italic;
+    }
+
+    .Gallery, h2 {
+        text-align: center;
+        color: gold;
+    }
+
+    .memanjang-1{
+        width: 300px;
+        height: 180px;
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+
+    .menyamping {
+        display: flex;
+    }
+    .Moon {
+        margin: 5px;
+        width: 150px;
+        height: 130px;
+        margin-top: 30px;
+        border-radius: 8px;
+    }
+    .ER {
+        margin: 5px;
+        width: 150px;
+        height: 130px;
+        margin-top: 30px;
+        border-radius: 8px;
+    }
+
+    .memanjang-2{
+        width: 300px;
+        height: 180px;
+        margin-top: 30px;
+        border-radius: 8px;
+    }
+
+    /* Lightbox */
+.lightbox {
+    display: none; 
+    position: fixed; 
+    z-index: 10; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.9); 
+}
+
+.lightbox img {
+    display: block;
+    margin: auto;
+    max-width: 90%; 
+    max-height: 90%;
+    border: 3px solid gold;
+    border-radius: 8px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color: gold;
+    cursor: pointer;
+}
+
+.lightbox .close:hover {
+    color: white;
+}
+
+
+    .title-rsvp {
+        font-style: italic;
+    }
+
+    .RSVP {
+        display: none;
+    }
+
+    /* Amplop Digital */
+
+
+    .Amplop-Digital {
+        text-align: center;
+        background-color: transparent;
+        padding: 30px;
+        border: 1px solid gold;
+        border-radius: 8px;
+        margin: 0 auto;
+        display: none;
+        margin-top: 10px;
+    }
+
+    .Amplop-Digital img {
+        border-radius: 8px;
+    }
+
+    .garis3 {
+        display: none;
+    }
+
+
+    .title-amplop {
+        display: none;
+        font-style: italic;
+    }
+
+    .salin {
+        padding: 10px;
+        border: 1px solid gold;
+        background-color: black;
+        color: gold;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .salin:hover {
+        background-color: rgb(102, 102, 102);
+        color: goldenrod;
+    }
+
+    .garis4 {
+        display: none;
+    }
+
+    .closing {
+        display: none;
+
+    }
+
+    </style>
+    </head>
+    <body>
+        <!-- Cover - Arka -->
+        <section class="cover">
+            <div class="judul">The Wedding <br><br> of <br><br>Arka Annur
+                <br><br> & <br><br> Setya Ayu </div>
+            <div class="ucapan"><p> Dengan rasa syukur, kami mengundang Anda
+                    untuk berbagi kebahagiaan dalam hari istimewa
+                    kami.</p></div>
+            <div class="tujuan"><p>Kepada:<br>Bapak/Ibu/Saudara/i</p></div>
+        </section>
+
+        <div class="tombol">
+            <button class="btn-inv">Buka Undangan</button>
+        </div>
+        <!-- Quotes -->
+        <section class="Ayat" id="Quotes">
+            <hr color="gold">
+            <p class="title">Ar-Rum : 21</p>
+            <p class="surah">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِّنْ
+                أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوٓا إِلَيْهَا وَجَعَلَ
+                بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ
+                لِّقَوْمٍ يَتَفَكَّرُونَ</p>
+            <p class="isi">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
+                menciptakan untukmu istri-istri dari jenismu sendiri, supaya
+                kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan
+                di antaramu rasa kasih dan sayang. Sesungguhnya pada yang
+                demikian itu benar-benar terdapat tanda-tanda bagi kaum yang
+                berpikir.</p>
+            </section>
+        <section class="kata-kata" id="KataKata">
+            <p class="title2">Minggu, 8 September 2024</p>
+            <p class="isi2">“I saw that you were perfect, and so I loved you.
+                Then I saw that you were not perfect and I loved you even
+                more.”</p>
+            <hr style="margin-top: 70px;" color="gold">
+            </section>
+        <!-- Halaman Mempelai -->
+            <section class="Mempelailk" id="Mempelailk">
+                <img class="lk" style="width: 150px;"
+                    src="Mempelai Laki-Laki.jpg">
+                <p class="groom">The Groom</p>
+                <p class="groom-name">Arka Annur Musharifa Enggok </p>
+                <p class="groom-deets">Putra Pertama dari Bapak Azhar dan Ibu
+                    Siska</p>
+                </section>
+            <section class="male-social">
+                <a href="https://www.facebook.com"><div class="fb"><img
+                            src="Facebook.png" alt></div></a>
+                <a href="https://www.Instagram.com"><div class="ig"><img
+                            src="Instagram.png" alt></div></a>
+                <a href="https://www.TwitterX.com"><div class="tw"><img
+                            src="TwitterX.png" alt></div></a>
+                </section>
+            <section class="Mempelaipr">
+                <img class="pr" style="width: 150px;" height="149px"
+                    src="Mempelai Wanita.jpg">
+                <p class="bride">The Bride</p>
+                <p class="bride-name">Setya Ayu Nurita Sari</p>
+                <p class="bride-deets">Putri kedua dari Bapak Kusnuri dan Ibu
+                    Sulastri</p>
+            </section>
+            <section class="female-social">
+                <a href="https://www.facebook.com"><div class="fb"><img
+                            src="Facebook.png" alt></div></a>
+                <a href="https://www.Instagram.com"><div class="ig"><img
+                            src="Instagram.png" alt></div></a>
+                <a href="https://www.TwitterX.com"><div class="tw"><img
+                            src="TwitterX.png" alt></div></a>
+                </section>
+        <div>
+            <hr class="garis" color="gold" style="margin-top: 20px;">
+        </div>
+
+            <h2 class="title-event">Event</h2>
+            <section class="Akad">
+                <iframe class="Map-Akad"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.190027299277!2d114.60012037497177!3d-3.3031025966717777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de42390a0c78db3%3A0x5c67ab477351c320!2sMasjid%20Muhammadiyah%20At%20-%20Tanwir!5e0!3m2!1sid!2sid!4v1725976749101!5m2!1sid!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p class="akad-title">Akad Nikah</p>
+                <p class="date">Minggu, 8 September 2024</p>
+                <p class="time">08:00 Wita - Selesai</p>
+                <p class="place">Masjid At-Tanwir <br> Jl. Sultan Adam Jl. Komp.
+                    Mahligai, Surgi Mufti, Kec. Banjarmasin Utara</p>
+                <a href="https://maps.app.goo.gl/Tyf6PfWHCKFmBDET9"><button
+                        class="akad-loc">Buka Maps</button></a>
+                </section>
+            <section class="Resepsi">
+                <iframe class="Map-resepsi"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.199727775388!2d114.6023877832992!3d-3.3006840048765596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de4239b715531ad%3A0x99a8627fcbda0c89!2sGedung%20Bulu%20Tangkis%20Hafiyun!5e0!3m2!1sid!2sid!4v1725979245074!5m2!1sid!2sid"
+                    width="400" height="300" style="border:0;" allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p class="resepsi-title">Resepsi</p>
+                <p class="resepsi-date">Minggu, 8 September 2024</p>
+                <p class="resepsi-time">10:30 Wita - 12:30 Wita</p>
+                <p class="resepsi-location">Gedung Hafiyun <br> Jl. Sultan Adam
+                    No.129, Surgi Mufti, Kec. Banjarmasin Utara.</p>
+                <a href="https://maps.app.goo.gl/9jj5pwfHZo4DaL8G8"><button
+                        class="resepsi-loc">Buka Maps</button></a>
+            </section>
+            
+            <hr class="garis2" color="gold">
+
+            <section class="Gallery">
+                <h2 class="title-gallery">Gallery</h2>
+                <img class="memanjang-1" src="NC.jpg" alt="Image 1" onclick="openLightbox('NC.jpg')">
+                <div class="menyamping">
+                    <img class="Moon" src="🌕2.jpg" alt="Image 2" onclick="openLightbox('🌕2.jpg')">
+                    <img class="ER" src="ER.jpg" alt="Image 3" onclick="openLightbox('ER.jpg')">
+                </div>
+                <img class="memanjang-2" src="Kicau Mania.jpg" alt="Image 4" onclick="openLightbox('Kicau Mania.jpg')">
+                <hr color="gold">
+            </section>
+            
+            <!-- Lightbox -->
+            <div class="lightbox" id="lightbox">
+                <span class="close" onclick="closeLightbox()">&times;</span>
+                <img id="lightbox-img" src="" alt="Lightbox Image">
+            </div>            
+        
+        <section class="RSVP" id="RSVP">
+            <h2 class="title-rsvp" style="text-align:center; color: gold;">RSVP</h2>
+            <form action="/submit-rsvp" method="POST" style="display:flex; flex-direction: column; max-width: 400px; margin: 0 auto; color: white;">
+                <label for="nama" style="margin-top: 10px;">Nama Tamu:</label>
+                <input type="text" id="nama" name="nama" required placeholder="Masukkan nama Anda" style="padding: 10px; border-radius: 8px; border: 1px solid gold; background-color: black; color: white;">
+        
+                <label for="email" style="margin-top: 10px;">Alamat Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Masukkan alamat email Anda" style="padding: 10px; border-radius: 8px; border: 1px solid gold; background-color: black; color: white;">
+        
+                <label for="ucapan" style="margin-top: 10px;">Ucapan:</label>
+                <textarea id="ucapan" name="ucapan" rows="4" placeholder="Tulis ucapan Anda di sini" style="padding: 10px; border-radius: 8px; border: 1px solid gold; background-color: black; color: white;"></textarea>
+        
+                <label for="kehadiran" style="margin-top: 10px;">Konfirmasi Kehadiran:</label>
+                <select id="kehadiran" name="kehadiran" required style="padding: 10px; border-radius: 8px; border: 1px solid gold; background-color: black; color: white;">
+                    <option value="" disabled selected>-- Pilih konfirmasi --</option>
+                    <option value="hadir">Hadir</option>
+                    <option value="tidak-hadir">Tidak Hadir</option>
+                </select>
+        
+                <button type="submit" style="margin-top: 20px; padding: 10px; border-radius: 10px; background-color: black; color: gold; border: 1px solid gold; cursor: pointer;">Kirim RSVP</button>
+            </form>
+        </section>
+        
+        <div id="notification" style="display:none; background-color: #4CAF50; color: white; padding: 15px; margin-top: 20px; text-align: center; border-radius: 10px;">
+            Terima kasih! Kehadiran Anda telah tercatat.
+        </div>
+
+        <div>
+            <hr class="garis3" color="gold">
+        </div>
+    
+        <h2 class="title-amplop">Amplop Digital</h2>
+        <section class="Amplop-Digital">
+            <div class="konten">
+        <img src="blank qr.png" alt="">
+        <h2 id="nomorRekening">087845287592</h2>
+        <h2>Arka Annur</h2>
+        <button class="salin" onclick="salinRekening()">Salin No Rekening</button>
+        <!-- Notifikasi -->
+        <div id="notif-salin" style="color: white; display: none; margin-top: 10px;"></div>
+            </div>
+        </section>
+
+        <div>
+            <hr class="garis4" color="gold">
+        </div>
+
+        <section class="penutup">
+            <h2 class="closing">Merupakan suatu kebahagiaan dan kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai. Atas kehadiran dan doanya, kami ucapkan terima kasih.</h2>
+        </section>
+
+              
+
+        <script>
+               // Ketika tombol "Buka Undangan" diklik
+document.querySelector(".btn-inv").addEventListener("click", function() {
+    // Menampilkan elemen yang sebelumnya disembunyikan
+    document.getElementById("Quotes").style.display = "block";
+    document.getElementById("KataKata").style.display = "block";
+    document.querySelector(".Mempelailk").style.display = "block"; 
+    document.querySelector(".Mempelaipr").style.display = "block"; 
+    document.querySelector(".Akad").style.display = "block"; 
+    document.querySelector(".Resepsi").style.display = "block"; 
+    document.querySelector(".garis").style.display = "block"; 
+    document.querySelector(".title-event").style.display = "block"; 
+    document.querySelector(".garis2").style.display = "block"; 
+    document.querySelector(".Gallery").style.display = "block";     
+    document.querySelector(".RSVP").style.display = "block"; 
+    document.querySelector(".Amplop-Digital ").style.display = "block"; 
+    document.querySelector(".garis3 ").style.display = "block"; 
+    document.querySelector(".title-amplop").style.display = "block"; 
+    document.querySelector(".garis4").style.display = "block"; 
+    document.querySelector(".closing").style.display = "block"; 
+        
+    // Menampilkan tombol sosial media pria dan wanita
+    document.querySelector(".male-social").style.display = "flex";
+    document.querySelector(".female-social").style.display = "flex";
+
+    // Scroll dengan smooth ke bagian quotes
+    document.getElementById("Quotes").scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("rsvpForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Mencegah reload halaman
+
+        // Menampilkan notifikasi setelah form dikirim
+        document.getElementById("notification").style.display = "block";
+
+        // Menghapus data form setelah disubmit (optional)
+        document.getElementById("rsvpForm").reset();
+
+        // Scroll smooth ke notifikasi
+        document.getElementById("notification").scrollIntoView({ behavior: "smooth" });
+    });
+
+    function salinRekening() {
+        var rekening = document.getElementById("nomorRekening").innerText; // Ambil nomor rekening dari elemen
+
+        var tempInput = document.createElement("input");
+        tempInput.value = rekening;
+        document.body.appendChild(tempInput);
+        
+        tempInput.select();
+        document.execCommand("copy");
+        
+        document.body.removeChild(tempInput);
+        
+        var notifSalin = document.getElementById('notif-salin');
+        notifSalin.textContent = "Nomor rekening berhasil disalin!";
+        notifSalin.style.display = 'block';
+        
+        setTimeout(function() {
+            notifSalin.style.display = 'none';
+        }, 3000);
+    }
+
+    function openLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = src;
+    lightbox.style.display = 'block';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+}
+
+
+</script>
+    </body>
+</html>
